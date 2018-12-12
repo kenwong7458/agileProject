@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Delete</title>
+</head>
+<body>
+    <h1>Delete restaurant</h1>
+    <p>Are your sure?</p>
+    <form method="POST">
+      <input type="hidden" name="id" value="<%= id %>" />
+      <input type="submit" value="Confirm"/>
+      <a href="/restaurant/show?id=<%= id %>">Back</a>
+    </form>
+</body>
+</html>

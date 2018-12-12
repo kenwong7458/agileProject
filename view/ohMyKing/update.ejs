@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Update Menu</title>
+    </head>
+    <body>
+        <%
+        const address = result.address || {}
+        const coord = address.coord || {}
+        %>
+        <h3>Update Restaurant Information for <%= result.name %></h3>
+        <form method="POST" enctype="multipart/form-data">
+            Restaurant ID: <%= result._id %> <br/>
+            <input type="hidden" name="id" value="<%= result._id %>">
+            Restaurant Name: <input type="text" name="name" value="<%= result.name %>" /><br/>
+            Borough: <input type="text" name="borough" value="<%= result.borough %>" /><br/>
+            Cuisine: <input type="text" name="cuisine" value="<%= result.cuisine %>" /><br/>
+            Adddress: <br/>
+            &nbsp; &nbsp; Street: <input type="text" name="street" value="<%= address.street %>" /><br/>
+            &nbsp; &nbsp; Building: <input type="text" name="building" value="<%= address.building %>" /><br/>
+            &nbsp; &nbsp; Zipcode: <input type="text" name="zipcode" value="<%= address.zipcode %>" /><br/>
+            &nbsp; &nbsp; Coord: <br/>
+            &nbsp; &nbsp; &nbsp; &nbsp; Lat: <input type="text" name="lat" value="<%= coord[0] %>" /><br/>
+            &nbsp; &nbsp; &nbsp; &nbsp; Lng: <input type="text" name="lng" value="<%= coord[1] %>" /><br/>
+            <br>
+            Update photo: <input type="file" name="photo" /><br/>
+            <span>Delete photo</span>
+            <input type="checkbox" name="deletePhoto"/>
+            <br>
+            <input type="submit" value="Submit" />
+            <br>
+            <% if (result.photoMimetype) { %>
+              <img src="/image/?id=<%= result._id %>" />
+            <% } %>
+        </form>
+    </body>
+</html>

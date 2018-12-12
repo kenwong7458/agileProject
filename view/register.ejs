@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Register</title>
+    </head>
+    <body>
+        <h3>Register account</h3>
+        <% for (const msg of messages) { %>
+          <p><%= msg %></p>
+        <% } %>
+        <form name="signup" method="post" action="/register">
+            Username: <br />
+            <input type="text" name="username" required="required"/> <br /><br />
+            Password:<br />
+            <input type="password" name="password" required="required"/> <br /><br />
+            Confirm your Password:<br />
+            <input type="password" name="cpassword" required="required"/> <br /><br />
+            <input type="submit" value="submit" name="submit" />
+            <input type="reset" value="reset" name="reset" />
+            <h4><a href="/login"> Login your account </a></h4>
+        </form>
+
+    </body>
+</html>

@@ -24,7 +24,7 @@ const config = {
 }
 
 app.use("/css",express.static(__dirname + "/css"));
-
+app.use("/kendo-ui",express.static(__dirname + "/kendo-ui"));
 /*
 function getConfigVar(name) {
     if (!process.env[name]) {

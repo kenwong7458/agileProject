@@ -12,20 +12,29 @@ const MongoClient = require("mongodb").MongoClient
 const assert = require("assert")
 const ObjectID = require("mongodb").ObjectID
 
+const PORT = process.env.PORT || 3000
+const SECRET_KEY = process.env.SECRET_KEY || "seesion"
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost/"
+
+
 const config = {
-    port: getConfigVar("PORT"),
-    secretKey: getConfigVar("SECRET_KEY"),
-    mongodbURL: getConfigVar("MONGODB_URL")
+    port: PORT,
+    secretKey: SECRET_KEY,
+    mongodbURL: MONGODB_URL
 }
 
+app.use("/css",express.static(__dirname + "/css"));
+
+/*
 function getConfigVar(name) {
     if (!process.env[name]) {
-        /* eslint-disable-next-line no-console */
+        // eslint-disable-next-line no-console 
         console.error(`Environment variable ${name} not set`)
         process.exit(-1)
     }
     return process.env[name]
 }
+*/
 
 function guestRequired(req, res, next) {
     if (req.session.username) {

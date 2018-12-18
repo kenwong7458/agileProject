@@ -23,8 +23,11 @@ const config = {
     mongodbURL: MONGODB_URL
 }
 
+<<<<<<< HEAD
 app.use("/css",express.static(__dirname + "/css"));
 app.use("/kendo-ui",express.static(__dirname + "/kendo-ui"));
+=======
+>>>>>>> fd8acd143837e91f3353bef6601f9ee75e4f2337
 /*
 function getConfigVar(name) {
     if (!process.env[name]) {

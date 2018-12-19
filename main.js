@@ -177,7 +177,7 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
         next()
     })
 
-
+    app.set('views', './view')
     app.set("view engine", "ejs")
 
     app.get("/", loginRequired, function (req, res) {

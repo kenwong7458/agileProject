@@ -172,6 +172,7 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
         next()
     })
 
+<<<<<<< HEAD
     app.use("/css", express.static('./view/css'));
 
     app.use("/kendo-ui", express.static('./view/kendo-ui'));
@@ -185,6 +186,9 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
     // app.use('/ext_script', express.static(path.join(__dirname, 'node_modules')));
 
     app.set('views', './view');
+=======
+    app.set('views', './view')
+>>>>>>> 2b7416575a9597d521e30ada1e188354db543c1e
     app.set("view engine", "ejs")
 
     app.get("/", loginRequired, function (req, res) {

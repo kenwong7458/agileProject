@@ -1,0 +1,325 @@
+/* --------------------- 
+BASIC SETTINGS
+--------------------- */
+
+/*  Fonts  */
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('/fonts/raleway-regular.eot');
+    src: url('/fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/raleway-regular.woff') format('woff'),
+         url('/fonts/raleway-regular.ttf') format('truetype'),
+         url('/fonts/raleway-regular.svg#RalewayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'raleway-semibold';
+    src: url('/fonts/raleway-semibold.eot');
+    src: url('/fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/raleway-semibold.woff') format('woff'),
+         url('/fonts/raleway-semibold.ttf') format('truetype'),
+         url('/fonts/raleway-semibold.svg#RalewaySemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+a {color: #000;}
+
+a:hover {
+    color: #f53f2c;
+    text-decoration: none;
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+    transition: .5s ease-out;
+}
+
+a:visited{
+    text-decoration: none
+}
+
+.highlight {color: #f53f2c;}
+h1 {font-size: 138px;}
+h2 {font-family: 'raleway-semibold', cursive;}
+h4 {font-weight: 600;}
+
+p {
+    font-size: 13px;
+    line-height: 1.7em;
+    color: #b2b2b2;
+}
+
+/* --------------------- 
+BUTTONS
+--------------------- */
+.btn:focus,
+input:focus {
+    outline: none !important;
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 10px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+    transition: .5s ease-out;
+    border: 0px;
+}
+
+.btn:focus {
+    background: #b73426;
+    color: #fff;
+    border: 2px solid #f53f2c;
+}
+
+.btn-default {
+    background: none;
+    color: #f53f2c;
+    border: 2.5px solid #f53f2c;
+}
+
+.btn-default:hover {
+    background: #f53f2c;
+    color: #fff;
+    border: 2px solid #b73426;
+}
+
+.btn-reverse {
+    border: 2.5px solid #fff;
+    color: #fff;
+    border-radius: 0;
+}
+
+.btn-reverse:hover {
+    color: #fff;
+    border-radius: 45px;
+}
+
+.btn-inverse {
+    background: #f53f2c;
+    color: #fff;
+    border: 2.5px solid #f53f2c;
+    margin-top: 0;
+}
+
+.btn-inverse:hover {
+    background: #b73426;
+    color: #fff;
+    border: 2.5px solid #f53f2c;
+	
+}
+
+.btn-block {
+  background: #24242a;
+  padding: 15px 0;
+  font-size: 16px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+}
+
+.btn-block:hover,
+.btn-block:focus,
+.btn-block:active {
+  background: #fc884f;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* --------------------- 
+INPUT FIELDS
+--------------------- */
+input {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 2px solid #b2b2b2;
+    margin: 30px 5px;
+    color: #b2b2b2;
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+    transition: .5s ease-out;
+}
+
+input:focus {
+    border: 2px solid #f53f2c;
+}
+
+/* --------------------- 
+SECTION HEADINGS
+--------------------- */
+.sectionhead {padding: 0 150px;}
+.sectionhead h2 {padding-bottom: 10px;}
+
+.sectionhead p {
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+.sectionhead hr {
+    width: 75px;
+    border-bottom: 4px solid #eeeeee;
+}
+
+/* --------------------- 
+LOGIN FORM CONTROL
+--------------------- */
+#login_main {
+    padding: 10px 0;
+    text-align: center;
+    background-image: url(/img/login/loginpage_content_background.jpg);
+    background-size: 100% 100%;
+    background-repeat: repeat;
+  }
+#login_main .form-group {
+    margin-bottom: 35px;
+  }
+
+#login_main .form-control {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #da6b6a;
+    color: #fc884f;
+    min-height: 45px;
+}
+
+#main_header{
+    height:100px;
+}
+
+/* --------------------- 
+INPUT FIELDS
+--------------------- */
+input {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 2px solid #b2b2b2;
+    margin: 30px 5px;
+    color: #b2b2b2;
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+    transition: .5s ease-out;
+}
+
+input:focus {
+    border: 2px solid #f53f2c;
+}
+
+
+/* --------------------- 
+FOOTER SECTION
+--------------------- */
+footer {
+    padding: 20px 0 30px 0;
+    height: 100px;
+
+}
+
+footer hr {
+    width: 75px;
+    border-bottom: 4px solid #eeeeee;
+}
+
+
+/* --------------------- 
+LOGIN BUTTON CONTROL
+--------------------- */
+
+.btn-block,
+.btn-default {
+    color: #fff !important;
+    background: #da6b6a !important;
+    padding: 15px !important;
+    font-size: 15px !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0!important;
+    border-radius: 0!important;
+    color: #fff!important;
+    -moz-transition: all 0.3s ease-in-out!important;
+    -o-transition: all 0.3s ease-in-out!important;
+    -webkit-transition: all 0.3s ease-in-out!important;
+    transition: all 0.3s ease-in-out!important;
+    font-weight: 700!important;
+    letter-spacing: 0.05em!important;
+    text-transform: uppercase!important;
+    border-radius: 0px !important;
+    border: 0px!important;
+    text-shadow: none !important;
+}
+
+.btn-purple {
+    color: #fff !important;
+    background: #9b8bca !important;
+    padding: 15px !important;
+    font-size: 15px !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0!important;
+    border-radius: 0!important;
+    color: #fff!important;
+    -moz-transition: all 0.3s ease-in-out!important;
+    -o-transition: all 0.3s ease-in-out!important;
+    -webkit-transition: all 0.3s ease-in-out!important;
+    transition: all 0.3s ease-in-out!important;
+    font-weight: 700!important;
+    letter-spacing: 0.05em!important;
+    text-transform: uppercase!important;
+    border-radius: 0px !important;
+    border: 0px!important;
+    text-shadow: none !important;
+}
+
+#btnLogin {
+    color: #fff !important;
+}
+
+.btn-block:hover,
+.btn-block:focus,
+.btn-block:active,
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus,
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus {
+    background: #fc884f !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 0px !important;
+    border: 0px!important;
+    text-shadow: none !important;
+}
+
+
+
+/* --------------------- 
+LOGIN hr CONTROL
+--------------------- */
+
+.light-sep {
+    max-width: 150px;
+    border: 1px solid #eeeeee;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#loginTitle {
+    font-family: MICROSOFT YAHEI;
+}

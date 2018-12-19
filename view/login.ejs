@@ -1,22 +1,116 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Login</title>
-    </head>
-    <body>
-        <h3>Login</h3>
-        <% for (const msg of messages) { %>
-          <p><%= msg %></p>
-        <% } %>
-        <form name="login" method="post" action="/login">
-            Username: <br />
-            <input type="text" name="username" required="required" /> <br />
-            Password:<br />
-            <input type="password" name="password" required="required" /> <br />
-            <input type="submit" value="submit" name="submit" />
-            <input type="reset" value="reset" name="reset" />
-        </form>
-        <h4><a href="/register"> Register your account.</a></h4>
-    </body>
+
+<head>
+    <title>Coventry Agile Project</title>
+    <!--css-->
+    <link rel="stylesheet" href="/kendo-ui/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="/kendo-ui/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="/kendo-ui/styles/kendo.default.mobile.min.css" />
+    <link rel='stylesheet' href='/css/myStyle.css' />
+    
+    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap/css/bootstrap-theme.min.css"> -->
+
+    <!--js-->
+    <script src="/kendo-ui/js/jquery.min.js"></script>
+    <script src="/kendo-ui/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="/css/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <section id="login_main">
+        <div class="app flex-row align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <!--empty ui spacing-->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-group mb-0">
+                            <div class="card p-2">
+                                <div class="card-block">
+                                    <img class="logoimg" src="/img/logo.png" alt="">
+                                    <hr class="light-sep">
+                                    <h2 id="loginTitle">Welcome to OhMyKing System</h2>
+                                    <p class="text-muted" id="loginTitle">User information</p>
+                                    <hr class="light-sep">
+                                    <form name="login" method="post" action="/login">
+                                        <div class="input-group mb-1 input_login">
+                                            <span class="input-group-addon">
+                                                <img class="user_input_img" src="/img/login/user_id.jpg" style="height:45px; width:45px;">
+                                            </span>
+                                            <input id="loginId" type="text" class="form-control" name="username"
+                                                required="required" placeholder="Username">
+                                        </div>
+                                        <div class="input-group mb-2 input_login">
+                                            <span class="input-group-addon">
+                                                <img class="user_input_img" src="/img/login/user_password.jpg" style="height:45px; width:45px;">
+                                            </span>
+                                            <input id="password" type="password" class="form-control" name="password"
+                                                required="required" placeholder="Password">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <!-- <input type="checkbox" checked="checked" id="loginTitle">Remember me -->
+                                            </div>
+                                            <div class="col-2"></div>
+                                            <div class="col-5">
+                                                <!-- <span class="psw" id="loginTitle"><u><a href="#">Forget password?</a></u></span> -->
+                                                <% for (const msg of messages) { %>
+                                                <p>
+                                                    <%= msg %>
+                                                </p>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="#" id="btnLogin" class="btn-block" type="submit" value="submit"
+                                                    name="submit">Login</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--edit-->
+                    <div class="col-md-2">
+                    <!--empty ui spacing-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer class="container text-center" id="login_footer">
+        <P>© 2018 All Rights Reserved. Produced by <a href="#">Ngai Ka Tung 187100800</a>.</P>
+        <hr>
+    </footer>
+    <!--FOOTER END-->
+</body>
 </html>
+<!-- <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+</head>
+<body>
+    <h3>Login</h3>
+    <% for (const msg of messages) { %>
+    <p>
+        <%= msg %>
+    </p>
+    <% } %>
+    <form name="login" method="post" action="/login">
+        Username: <br />
+        <input type="text" name="username" required="required" /> <br />
+        Password:<br />
+        <input type="password" name="password" required="required" /> <br />
+        <input type="submit" value="submit" name="submit" />
+        <input type="reset" value="reset" name="reset" />
+    </form>
+    <h4><a href="/register"> Register your account.</a></h4>
+</body> -->

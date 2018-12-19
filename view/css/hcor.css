@@ -1,0 +1,442 @@
+.k-loading-image {
+    z-index: 99999999;
+    background-size: 100px 100px;
+    /* background-image: url('./../img/loading.svg'); */
+    background-image: url('./../img/spinner.svg');
+}
+
+.k-loading-color {
+    /* background-color: #85929E;
+    filter: blur(5px); */
+    opacity: .6;
+}
+
+.width-80 {
+    width: 80px;
+}
+
+.width-100 {
+    width: 100px;
+}
+
+.width-250 {
+    width: 250px;
+}
+
+.width-600 {
+    width: 600px;
+}
+
+.width-800 {
+    width: 800px;
+}
+
+.width-1100 {
+    width: 1100px;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.height-170 {
+    height: 170px !important;
+}
+
+.height-300 {
+    height: 300px !important;
+}
+
+.height-850 {
+    height: 850px;
+}
+
+.height-full {
+    height: 100%;
+}
+
+.float-right {
+    float: right;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.margin-left-right-10 {
+    margin: 0px 10px 0px 10px;
+}
+
+.margin-left--50 {
+    margin-left: -50px
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
+}
+
+.margin-top--25 {
+    margin-top: -25px;
+}
+
+.margin-top--45 {
+    margin-top: -45px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.margin-bottom--45 {
+    margin-bottom: 145px;
+}
+
+.margin-0--15-0--15 {
+    margin: 0px -15px 0px -15px;
+}
+
+.padding-none {
+    padding: 0px;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-10-10-0-10 {
+    padding: 10px 10px 0px 10px;
+}
+
+.font-size-10 {
+    font-size: 10px;
+}
+
+.font-size-15 {
+    font-size: 15px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-30 {
+    font-size: 30px;
+}
+
+.line {
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.topMenu {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 20%;
+    height: 180px;
+    z-index: 3;
+    padding-right: 55px;
+    right: -50px;
+}
+
+.display-none {
+    display: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.confirmBox {
+    min-width: 300px;
+}
+
+
+/*Tag Boxes*/
+
+.tag-box {
+    display: inline-block;
+    color: #2C3E50;
+    font-size: 15px;
+    background-color: #fffac3;
+    padding: 2px 8px 2px 8px;
+    border-radius: 5px;
+    margin: 0px 6px 6px 0px;
+}
+
+.sortImg {
+    display: inline-block;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 3px 0 0 3px;
+    background: url('./../img//handle.png') no-repeat 50% 50% #ccc;
+    cursor: move;
+}
+
+.border-2-solid {
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.margin-right-150 {
+    margin-right: 150px;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.fc-toolbar .fc-state-active,
+.fc-toolbar .ui-state-active {
+    z-index: 0;
+}
+
+.z-index-9999999 {
+    z-index: 9999999;
+}
+
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.min-width-300 {
+    min-width: 300px
+}
+
+.k-scheduler-layout:not(.k-scheduler-agendaview) {
+    table-layout: fixed;
+}
+
+.k-scheduler-layout:not(.k-scheduler-agendaview)>tbody>tr>td:first-child {
+    width: 100px;
+}
+
+.fc-event,
+.fc-event-dot {
+    background-color: #D0BAFF;
+}
+
+.border-right {
+    border-right: 1px solid #BBBBBB;
+}
+
+#schedulerDateView {
+    height: 100%;
+}
+
+.md-scroll-mask {
+    z-index: 10001;
+}
+
+.md-dialog-container {
+    z-index: 10002;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "msjh";
+    src: url("../../assets/styles/fonts/msjh.ttf") format("truetype");
+}
+
+.k-scheduler {
+    font-family: "msjh", sans-serif;
+}
+
+.fc-event-container {
+    color: #fff !important;
+}
+
+
+/*Vital Sign Dashboard*/
+
+.dashboard-header {
+    display: block;
+    position: relative;
+    font-size: 15px;
+    text-align: center !important;
+    height: 25px;
+    margin: 0px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    padding: 3px 10px 3px 10px;
+    background-color: rgba(197, 221, 255, 0.2) !important;
+}
+
+.dashboard_body_blood_pressure {
+    display: block;
+    height: 180px;
+    margin: 0px -10px 0px -10px;
+    background-color: rgba(197, 221, 255, 0.2) !important;
+    color: #6e6e6e !important;
+    text-align: center;
+}
+
+.dashboard_body_blood_oxygen {
+    display: block;
+    height: 180px;
+    margin: 0px -10px 0px -10px;
+    background-color: rgba(197, 221, 255, 0.2) !important;
+}
+
+.dashboard_body_heart_rate {
+    display: block;
+    height: 100px;
+    margin: 0px -10px 0px -10px;
+    padding-top: 10px;
+    background-color: rgba(197, 221, 255, 0.2) !important;
+    color: #6e6e6e !important;
+    text-align: center;
+}
+
+.dashboard_body_blood_glucose {
+    display: block;
+    height: 100px;
+    margin: 0px -10px 0px -10px;
+    padding-top: 10px;
+    background-color: rgba(197, 221, 255, 0.2) !important;
+    color: #6e6e6e !important;
+    text-align: center;
+}
+
+.dashboard_body_body_temperature {
+    display: block;
+    height: 100px;
+    margin: 0px -10px 0px -10px;
+    padding-top: 10px;
+    background-color: rgba(197, 221, 255, 0.2) !important;
+    color: #6e6e6e !important;
+    text-align: center;
+}
+
+.dashboard-footer {
+    display: block;
+    position: relative;
+    font-size: 12px;
+    text-align: center !important;
+    height: 20px;
+    margin: 0px -10px 0px -10px;
+    border-radius: 0px 0px 10px 10px;
+    padding: 0px 15px 5px 15px;
+    background-color: rgba(197, 221, 255, 0.2) !important;
+    color: #6e6e6e !important;
+}
+
+.data_alert_yellow {
+    color: #B69E17;
+}
+
+.data_alert_orange {
+    color: #408000;
+}
+
+.data_alert_red {
+    color: #8B0000;
+}
+
+body {
+    /* padding-top: 70px; */
+    width: auto;
+}
+
+.no-gutter[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.navbar {
+    /*right-margin:5px;*/
+    /* Set the fixed height of the footer here */
+    background-color: transparent;
+}
+
+.navbar-header img {
+    display: inline-block;
+    height: 100%;
+}
+
+.navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navbar-brand .navbar-title {
+    vertical-align: bottom;
+    padding-bottom: 5px;
+    font-size: 36px;
+}
+
+.navbar-default {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav .active a {
+    color: #0071BA;
+}
+
+.navbar-default .navbar-nav .active a:focus,
+.navbar-default .navbar-nav .active a:hover {
+    color: #5DABDC;
+}
+
+.navbar-default .navbar-nav li a {
+    color: #0071BA;
+}
+
+.navbar-default .navbar-nav li a:focus,
+.navbar-default .navbar-nav li a:hover {
+    color: #5DABDC;
+}
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active a:hover,
+.dropdown-menu>.active a:focus {
+    background-color: transparent;
+}
+
+.footer {
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 30px;
+    background-color: transparent;
+}
+
+
+/* kendo-bootstrap-demo
+ * https://github.com/telerik/kendo-bootstrap-demo/blob/master/html/styles.css
+ *  */
+
+.buttons-wrap {
+    border-top: 1px solid #DBDCDD;
+    padding-top: .5em;
+    text-align: right;
+}
+
+.ra-well-title {
+    font-size: 1.2857em;
+    line-height: 1.2857em;
+    border-bottom: 1px solid #DBDCDD;
+    margin: -5px -19px 0.8333em;
+    padding: 0 19px 0.7222em;
+}
+
+element.style {
+    color: #404040 !important;
+}

@@ -13,8 +13,8 @@ const assert = require("assert")
 const ObjectID = require("mongodb").ObjectID
 
 const PORT = process.env.PORT || 3000
-const SECRET_KEY = process.env.SECRET_KEY || "seesion"
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost/"
+const SECRET_KEY = process.env.SECRET_KEY || "session"
+const MONGODB_URL = process.env.MONGODB_URL || "127.0.0.1:27017"
 
 
 const config = {
@@ -23,11 +23,6 @@ const config = {
     mongodbURL: MONGODB_URL
 }
 
-<<<<<<< HEAD
-app.use("/css",express.static(__dirname + "/css"));
-app.use("/kendo-ui",express.static(__dirname + "/kendo-ui"));
-=======
->>>>>>> fd8acd143837e91f3353bef6601f9ee75e4f2337
 /*
 function getConfigVar(name) {
     if (!process.env[name]) {
@@ -177,7 +172,19 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
         next()
     })
 
+    app.use("/css", express.static('./view/css'));
 
+    app.use("/kendo-ui", express.static('./view/kendo-ui'));
+
+    app.use("/js", express.static('./view/js'));
+
+    app.use("/img", express.static('./view/img'));
+
+    app.use("/fonts", express.static('./view/fonts'));
+
+    // app.use('/ext_script', express.static(path.join(__dirname, 'node_modules')));
+
+    app.set('views', './view');
     app.set("view engine", "ejs")
 
     app.get("/", loginRequired, function (req, res) {

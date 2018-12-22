@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/kendo-ui/styles/kendo.default.mobile.min.css" />
   <link rel='stylesheet' href='/css/myStyle.css' />
   <link rel='stylesheet' href='/css/menu.css' />
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.css">
   <!-- <link rel="stylesheet" href="/css/bootstrap/css/bootstrap-theme.min.css"> -->
@@ -19,12 +20,13 @@
   <script src="/kendo-ui/js/kendo.all.min.js"></script>
   <script type="text/javascript" src="/css/bootstrap/js/bootstrap.min.js"></script>
   <script src="/js/restaurants.js"></script>
+
 </head>
 
 <body>
   <!-- <div class="container"> -->
   <div class="row">
-    <div class="col-md-1">
+    <div class="col-md-1" style="background: #222222;">
       <nav role="navigation">
         <div id="menuToggle">
           <input type="checkbox" />
@@ -61,47 +63,263 @@
     </div>
     <!--content-->
     <div class="col-md-11">
-        <div id="example">
-            <div id="grid"></div>
-
-            <script>
-                $(document).ready(function() {
-                    $("#grid").kendoGrid({
-                        dataSource: {
-                            data: products,
-                            schema: {
-                                model: {
-                                    fields: {
-                                        RestaurantName: { type: "string" },
-                                        District: { type: "string" },
-                                        Area: { type: "string" },
-                                        CategoryName: { type: "string" }
-                                    }
-                                }
-                            },
-                            pageSize: 5
-                        },
-                        height: 550,
-                        scrollable: true,
-                        sortable: true,
-                        filterable: true,
-                        pageable: {
-                            input: true,
-                            numeric: false
-                        },
-                        columns: [
-                            "RestaurantName",
-                            { field: "District", title: "District", width: "130px" },
-                            { field: "Area", title: "Area", width: "130px" },
-                            { field: "CategoryName", width: "130px" }
-                        ]
+      <!--filter column start-->
+      <section>
+        <div class="container">
+          <div class="box wide">
+            <div class="searches">
+              <div class="row">
+                <div class="col-md-12">
+                  <h4>Search</h4>
+                </div>
+                <div class="col-md-4">
+                  <!-- <ul class="options">
+                    <li> -->
+                  <!-- <label for="RestaurantName">Restaurant Name:</label> -->
+                  <input type="text" value="Restaurant Name" id="page" class="k-textbox form-control" />
+                </div>
+                <div class="col-md-8"></div>
+                <div class="col-md-12" style="padding-bottom:10px;"></div>
+                <!-- </li>
+                    <li> -->
+                <div class="col-md-4">
+                  <label for="Area">Area:</label>
+                  <select id="order">
+                    <option value="NewTerritories">NewTerritories</option>
+                    <option value="Kowloon">Kowloon</option>
+                    <option value="HongKong">Hong Kong</option>
+                  </select>
+                </div>
+                <!-- </li>
+              <li> -->
+                <div class="col-md-4">
+                  <label for="District">District:</label>
+                  <select id="dir">
+                    <option value="ShaTin">ShaTin</option>
+                    <option value="TaiPo">TaiPo</option>
+                    <option value="YauTsimMong">YauTsimMong</option>
+                    <option value="ShamShuiPo">ShamShuiPo</option>
+                    <option value="KowloonCity">KowloonCity</option>
+                    <option value="WongTaiSin">WongTaiSin</option>
+                    <option value="KwunTong">KwunTong</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label for="Category">Category:</label>
+                  <select id="foodCategory">
+                    <option value="chinese">Chinese</option>
+                    <option value="western">Western</option>
+                    <option value="japanese">Japanese</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Dessert">Dessert</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label for="Category">Method:</label>
+                  <select id="foodCategory">
+                    <option value="TakeAway">Take Away</option>
+                    <option value="Delivery">Delivery</option>
+                  </select>
+                </div>
+                <!-- </li>
+              <li> -->
+                <div class="col-md-8">
+                  <div class="demo-section k-content form-group">
+                    <label for="booking" style="text-align: right !important; clear: both; float:left !important; padding-right:10px;">Booking hours:</label>
+                    <input id="timepicker" value="10:00 AM" title="timepicker" class="k-textbox"/>
+                  </div>
+                  <script>
+                    $(document).ready(function () {
+                      // create TimePicker from input HTML element
+                      $("#timepicker").kendoTimePicker({
+                        dateInput: true
+                      });
                     });
-                });
-            </script>
+                  </script>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-4">
+                  <button class="btn-block" id="apply" style="margin-left: 74px;">Apply for search</button>
+                  <!-- </li> -->
+                </div>
+                <div class="col-md-5"></div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--filter column ends-->
+      <section>
+        <div class="container">
+          <!-- <div class="col-sm-12 col-md-12"> -->
+          <div class="features_items">
+            <!--features_items-->
+            <div class="row">
+              <div class="col-md-12">
+                <h4>Results</h4><h4>Viewing 8 of 250 records</h4>
+              </div>
+              <div class="col-md-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/img/restaurant/pizzahut.jpg" alt="" />
+                      <h2>Pizza Hut</h2>
+                      <p>Shop 6, G/F, Technology Park, 18 On Lai Street, Sha Tin</p>
+                      <p>Open Hours: 11:00 - 23:00</p>
+                      <p>Phone: 2646 4889</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/img/restaurant/chacha.jpg" alt="" />
+                      <h2>Sweets House Cha Cha</h2>
+                      <p>city'super, 2/F, New Town Plaza Phase 1, 18 Sha Tin Centre Street, Sha Tin</p>
+                      <p>Open Hours: 00:00 - 22:00</p>
+                      <p>Phone: 2375 8222</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/img/restaurant/shunxing.jpg" alt="" />
+                      <h2>New Shun Hing </h2>
+                      <p>9-min walk from Exit A, Yuen Long MTR station</p>
+                      <p>Open Hours: 11:00 - 20:00</p>
+                      <p>Phone: 2476 9348</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/img/restaurant/phd.jpg" alt="" />
+                      <h2>PHD</h2>
+                      <p>Shop 2, G/F, On Hong Building, 29-47 Tai Pa Street, Tsuen Wan</p>
+                      <p>Open Hours: 00:00 - 23:59</p>
+                      <p>Phone: 2476 9348</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/img/restaurant/eateast.jpg" alt="" />
+                      <h2>Eat East</h2>
+                      <p>Shop G65, G/F, City One Plaza, Ngan Shing Street, Sha Tin</p>
+                      <p>Open Hours: 09:00 - 22:00</p>
+                      <p>Phone: 2144 5514</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/img/restaurant/uo-show.jpg" alt="" />
+                      <h2>Uo-Show</h2>
+                      <p>Shop 26C & 26D, 3/F, Shatin Centre, Sha Tin</p>
+                      <p>Open Hours: 11:00 - 22:00</p>
+                      <p>Phone: 2606 3001</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/img/restaurant/fuk.jpg" alt="" />
+                      <h2>食得福餐廳小廚 </h2>
+                      <p>沙田圓洲角源順圍2號冠華鏡廠集團大廈地下</p>
+                      <p>Open Hours: 08:00 - 23:59</p>
+                      <p>Phone: 2686 9328</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/img/restaurant/longyuan.jpg" alt="" />
+                      <h2>Long Yuan Restaurant</h2>
+                      <p>70 Sheung Keng Hau , Hing Keng Street,, Tai Wai</p>
+                      <p>Open Hours: 06:00 - 02:00</p>
+                      <p>Phone: 2691 6333</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>View Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- </div> -->
+              <!--features_items-->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="example">
+        <div id="grid"></div>
+
+        <script>
+          $(document).ready(function () {
+            $("#grid").kendoGrid({
+              dataSource: {
+                data: products,
+                schema: {
+                  model: {
+                    fields: {
+                      RestaurantName: { type: "string" },
+                      District: { type: "string" },
+                      Area: { type: "string" },
+                      CategoryName: { type: "string" }
+                    }
+                  }
+                },
+                pageSize: 5
+              },
+              height: 550,
+              scrollable: true,
+              sortable: true,
+              filterable: true,
+              pageable: {
+                input: true,
+                numeric: false
+              },
+              columns: [
+                "RestaurantName",
+                { field: "District", title: "District", width: "130px" },
+                { field: "Area", title: "Area", width: "130px" },
+                { field: "CategoryName", width: "130px" }
+              ]
+            });
+          });
+        </script>
+      </div>
     </div>
-  </div>
-  <!-- </div> -->
-  <!-- <form action="/logout" method="POST">
+    <!-- </div> -->
+    <!-- <form action="/logout" method="POST">
       <input type="submit" value="logout">
     </form>
     <ol>

@@ -14,8 +14,10 @@ const ObjectID = require("mongodb").ObjectID
 
 const PORT = process.env.PORT || 3000
 const SECRET_KEY = process.env.SECRET_KEY || "session"
-const MONGODB_URL = process.env.MONGODB_URL || "127.0.0.1:27017"
+const MONGODB_URL = "mongodb://127.0.0.1:27017"
 
+// var server = require("./openricescraper/server");
+// server.start();
 
 const config = {
     port: PORT,
@@ -172,7 +174,6 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
         next()
     })
 
-<<<<<<< HEAD
     app.use("/css", express.static('./view/css'));
 
     app.use("/kendo-ui", express.static('./view/kendo-ui'));
@@ -186,9 +187,6 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
     // app.use('/ext_script', express.static(path.join(__dirname, 'node_modules')));
 
     app.set('views', './view');
-=======
-    app.set('views', './view')
->>>>>>> 2b7416575a9597d521e30ada1e188354db543c1e
     app.set("view engine", "ejs")
 
     app.get("/", loginRequired, function (req, res) {
@@ -208,6 +206,10 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
 
     app.get("/login", guestRequired, function (req, res) {
         res.render("login.ejs")
+    })
+
+    app.get("/index", guestRequired, function (req, res) {
+        res.render("index.ejs")
     })
 
     app.get("/register", guestRequired, function (req, res) {
@@ -330,16 +332,21 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
 
     app.post("/login", function (req, res) {
         const { username, password } = req.body
-
-        db.collection("users").find({ username, password }).count(function (err, count) {
+        console.log("req: " + req)
+        db.collection("users").find().count(function (err, count) {
             assert.equal(err, null)
 
-            if (count === 1) {
+            console.log("count: 1")
+            // console.log("count: " + count)
+            // if (count===1){
+            if (username==="admin" && password==="adminpass") {
                 req.session.username = username
                 res.redirect("/")
+                console.log("Login Success. To Index page.")
             } else {
                 req.flash("info", "Your username or password is wrong.")
                 res.redirect("/login")
+                concole.log("Login Denied.")
             }
         })
     })
@@ -347,6 +354,7 @@ MongoClient.connect(config.mongodbURL, function (err, db) {
     app.post("/logout", function (req, res) {
         req.session.username = null
         res.redirect("/login")
+        console.log("logout. To login page")
     })
 
     app.post("/ohMyKing/new", loginRequired, function (req, res) {

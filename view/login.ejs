@@ -52,11 +52,7 @@
                                                 required="required" placeholder="Password">
                                         </div>
                                         <div class="row">
-                                            <div class="col-5">
-                                                <!-- <input type="checkbox" checked="checked" id="loginTitle">Remember me -->
-                                            </div>
-                                            <div class="col-2"></div>
-                                            <div class="col-5">
+                                            <div class="col-12">
                                                 <!-- <span class="psw" id="loginTitle"><u><a href="#">Forget password?</a></u></span> -->
                                                 <% for (const msg of messages) { %>
                                                 <p>
@@ -68,7 +64,8 @@
                                         <br>
                                         <div class="row">
                                             <div class="col-12">
-                                                <a href="#" id="btnLogin" class="btn-block" type="submit" value="submit" name="submit">Login</a>
+                                                    <input id="btnLogin" class="btn-block" type="submit" value="LOGIN" name="submit" />
+                                                <!-- <a href="#" id="btnLogin" class="btn-block" type="submit" value="submit" name="submit">Login</a> -->
                                             </div>
                                         </div>
                                     </form>

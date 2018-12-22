@@ -1,18 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8">
-    <title>Menu</title>
+    <title>Coventry Agile Project</title>
+    <!--css-->
+    <link rel="stylesheet" href="/kendo-ui/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="/kendo-ui/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="/kendo-ui/styles/kendo.default.mobile.min.css" />
+    <link rel='stylesheet' href='/css/myStyle.css' />
+    <link rel='stylesheet' href='/css/menu.css' />
+
+    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap/css/bootstrap-theme.min.css"> -->
+
+    <!--js-->
+    <script src="/kendo-ui/js/jquery.min.js"></script>
+    <script src="/kendo-ui/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="/css/bootstrap/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <h1>Menus</h1>
-    <h2>Showing <%= restaurants.length %> document(s)</h2>
-    <ol>
-    <% for (const r of restaurants) { %>
-    	<li><a href="/ohMyKing/show?id=<%= r._id %>"><%= r.name %></a></li>
-    <% } %>
-    </ol>
-    <a href="/">back to menu</a>
+    <!-- <div class="container"> -->
+        <div class="row">
+            <div class="col-md-1">
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <p>
+                                <h4>Welcome,
+                                    <%= username %> !</h4>
+                                <% for (const msg of messages) { %>
+                                <p>
+                                    <%= msg %>
+                                </p>
+                                <% } %>
+                            </p>
+                            <a href="/index">
+                                <li>Home</li>
+                            </a>
+                            <a href="/ohMyKing/new">
+                                <li>Create New</li>
+                            </a>
+                            <a href="/ohMyKing/list">
+                                <li>My Cart</li>
+                            </a>
+                            <a href="/login" action="/logout" method="POST">
+                                <li>
+                                    Logout
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--content-->
+            <div class="col-md-11">
+                <h2>Showing
+                    <%= restaurants.length %> document(s)</h2>
+                <ol>
+                    <% for (const r of restaurants) { %>
+                    <li><a href="/ohMyKing/show?id=<%= r._id %>">
+                            <%= r.name %></a></li>
+                    <% } %>
+                </ol>
+                <a href="/">back to menu</a>
+            </div>
+        </div>
+
 </body>
+
 </html>
